@@ -1,9 +1,12 @@
 {
+  "homepage": "https://maitrux.github.io/main-artikel",
   "name": "main-artikel-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "npm start --prefix server",
     "client": "npm start --prefix client"
@@ -17,12 +20,12 @@
   "bugs": {
     "url": "https://github.com/maitrux/main-artikel/issues"
   },
-  "homepage": "https://github.com/maitrux/main-artikel#readme",
   "dependencies": {
     "express": "^4.17.2"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
+    "gh-pages": "^3.2.3",
     "nodemon": "^2.0.15"
   }
 }
