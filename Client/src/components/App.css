@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+  margin: auto;
+  background-color: #FFF3DC; 
+  background-size: cover;
+  height: 100vh;
+}
+
+#find-article-form {
+  margin-top: 30px;
+}
+
+#find-article-form Button {
+  width: 100%;
+  background-color: #fe5339;
+  border-color: #fe5339;
+}
+
+#find-article-form Button:hover {
+  background-color: #e54b33;
+  border-color: #e54b33;
+}
+
+.game-container {
+  padding-top: 100px
+}
+
+.word-text {
+  font-size: 40px;
+  font-weight: bold;
+  display: inline-flex;
+}
+
+.article-text {
+  color: #fe5339;
+  margin-right: 5px;
+}
+
+.error-text-bold {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.something-went-wrong-img {
+  max-height: 200px;
+}
+
+/* Common css */
+
+.justify-content-center {
+  margin: 0 auto;
+}
+
+.float-right {
+  float: right;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.display-none {
+  display: none;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+/* Margins */
+
+.margin-top-sm {
+  margin-top: 10px;
+}
+
+/* Buttons */
+
+Button.disabled {
+  background-color: gainsboro !important;
+  border-color: gainsboro !important;
+}
+

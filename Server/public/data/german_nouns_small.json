@@ -1,0 +1,39 @@
+{
+  "words": [
+    {
+      "articleSingular": "Die",
+      "wordSingular": "Zeit",
+      "articlePlural": "Die",
+      "wordPlural": "Zeit",
+      "englsihTranslation": "Time"
+    },
+    {
+      "articleSingular": "Der",
+      "wordSingular": "Man",
+      "articlePlural": "Die",
+      "wordPlural": "Man",
+      "englsihTranslation": "Man"
+    },
+    {
+      "articleSingular": "Die",
+      "wordSingular": "Hand",
+      "articlePlural": "Die",
+      "wordPlural": "Hand",
+      "englsihTranslation": "Hand"
+    },
+    {
+      "articleSingular": "Der",
+      "wordSingular": "Tag",
+      "articlePlural": "Die",
+      "wordPlural": "Tag",
+      "englsihTranslation": "Day"
+    },
+    {
+      "articleSingular": "Der",
+      "wordSingular": "Weg",
+      "articlePlural": "Die",
+      "wordPlural": "Weg",
+      "englsihTranslation": "Way"
+    }
+  ]
+}
