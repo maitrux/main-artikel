@@ -23,7 +23,7 @@ function ArticleForm() {
 
   const findWord = (word) => {
     axios
-    .get('http://localhost:9000/main-artikel/article', { params: { word: word }})
+    .get('/main-artikel/article', { params: { word: word }})
     .then(response => {
       var wordObject = response.data;
       if(Object.keys(wordObject).length === 0) {

@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:9000/main-artikel')
+      .get('/main-artikel')
       .then(response => {
         setState(response.data)
       })
