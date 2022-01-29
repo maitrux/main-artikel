@@ -21,7 +21,7 @@ function GuessArticle() {
       
       setTimeout(() => {
         setLastRandomWord(wordObject)
-      }, 2500)
+      }, 2250)
       
     })
   }

@@ -133,13 +133,6 @@ Button.disabled, .disabled {
   color: #484649;
 }
 
-.outline-black:not(.correct-answer):hover,
-.outline-black:not(.disabled):hover
-{
-  background-color: #484649;
-  color: #fff;
-}
-
 .outline-red:not(.correct-answer),
 .outline-red:not(.disabled),
 .outline-red:focus {
@@ -148,21 +141,10 @@ Button.disabled, .disabled {
   color: #fe5339;
 }
 
-.outline-red:not(.correct-answer):hover, 
-.outline-red:not(.disabled):hover {
-  background-color: #fe5339;
-  color: #fff;
-}
-
 .fill-red {
   background-color: #fe5339 !important;
   background-color: #fe5339 !important;
   color: #fff !important;
-}
-
-.fill-red:hover {
-  background-color: #fff !important;
-  color: #fe5339 !important;
 }
 
 .outline-yellow:not(.correct-answer),
@@ -173,20 +155,39 @@ Button.disabled, .disabled {
   color: #ffd541;
 }
 
-.outline-yellow:not(.correct-answer):hover, 
-.outline-yellow:not(.disabled):hover,
-.fill-yellow {
-  background-color: #ffd541;
-  color: #fff;
-}
-
 .fill-yellow {
   background-color: #ffd541 !important;
   background-color: #ffd541 !important;
   color: #fff !important;
 }
 
-.fill-yellow:hover {
-  background-color: #fff !important;
-  color: #ffd541 !important;
+@media (hover: hover) and (pointer: fine) {
+  .outline-yellow:not(.correct-answer):hover, 
+  .outline-yellow:not(.disabled):hover {
+    background-color: #ffd541;
+    color: #fff;
+  }
+
+  .fill-yellow:hover {
+    background-color: #fff !important;
+    color: #ffd541 !important;
+  }
+
+  .fill-red:hover {
+    background-color: #fff !important;
+    color: #fe5339 !important;
+  }
+
+  .outline-red:not(.correct-answer):hover, 
+  .outline-red:not(.disabled):hover {
+    background-color: #fe5339;
+    color: #fff;
+  }
+
+  .outline-black:not(.correct-answer):hover,
+  .outline-black:not(.disabled):hover
+  {
+    background-color: #484649;
+    color: #fff;
+  }
 }
