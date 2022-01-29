@@ -18,6 +18,14 @@ function findWord(inputWord) {
   return foundWordObject;
 }
 
-module.exports = { findWord }
+function randomWord() {
+  var randomWord = words[Math.floor(Math.random() * words.length)]
+
+  return randomWord;
+}
+
+module.exports = { findWord, randomWord }
 
 // findWord();
+
+randomWord();

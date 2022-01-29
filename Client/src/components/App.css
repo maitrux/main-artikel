@@ -1,6 +1,4 @@
 .App {
-  text-align: center;
-  margin: auto;
   background-color: #FFF3DC; 
   background-size: cover;
   height: 100vh;
@@ -22,6 +20,8 @@
 }
 
 .game-container {
+  text-align: center;
+  margin: auto;
   padding-top: 100px
 }
 
@@ -36,6 +36,10 @@
   margin-right: 5px;
 }
 
+.article-text.green {
+  color: green;
+}
+
 .error-text-bold {
   font-size: 40px;
   font-weight: bold;
@@ -43,6 +47,30 @@
 
 .something-went-wrong-img {
   max-height: 200px;
+}
+
+.game-navbar {
+  background-color: #484649;
+  color: #fff;
+  height: 50px;
+  font-size: 30px;
+}
+
+.game-navbar .list-icon{
+  float: right;
+  padding-right: 10px;
+}
+
+.correct-answer {
+  border-color: green !important;
+  background-color: green !important;
+  color: #fff !important
+}
+
+.correct-answer:hover {
+  border-color: green !important;
+  background-color: green !important;
+  color: #fff !important
 }
 
 /* Common css */
@@ -71,16 +99,87 @@
   display: inline-flex;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* Margins */
 
 .margin-top-sm {
   margin-top: 10px;
 }
 
-/* Buttons */
-
-Button.disabled {
-  background-color: gainsboro !important;
-  border-color: gainsboro !important;
+.margin-top-lg {
+  margin-top: 20px;
 }
 
+/* Buttons */
+
+Button.disabled, .disabled {
+  background-color: gainsboro !important;
+  border-color: gainsboro !important;
+  color: #fff !important;
+}
+
+.outline-black:not(.correct-answer),
+.outline-black:not(.disabled) {
+  border-color: #484649;
+  color: #484649;
+}
+
+.outline-black:not(.correct-answer):hover,
+.outline-black:not(.disabled):hover
+{
+  background-color: #484649;
+  color: #fff;
+}
+
+.outline-red:not(.correct-answer),
+.outline-red:not(.disabled) {
+  border-color: #fe5339;
+  background-color: #fff;
+  color: #fe5339;
+}
+
+.outline-red:not(.correct-answer):hover, 
+.outline-red:not(.disabled):hover {
+  background-color: #fe5339;
+  color: #fff;
+}
+
+.fill-red {
+  background-color: #fe5339 !important;
+  background-color: #fe5339 !important;
+  color: #fff !important;
+}
+
+.fill-red:hover {
+  background-color: #fff !important;
+  color: #fe5339 !important;
+}
+
+.outline-yellow:not(.correct-answer),
+.outline-yellow:not(.disabled),
+.fill-yellow:hover {
+  border-color: #ffd541;
+  background-color: #fff;
+  color: #ffd541;
+}
+
+.outline-yellow:not(.correct-answer):hover, 
+.outline-yellow:not(.disabled):hover,
+.fill-yellow {
+  background-color: #ffd541;
+  color: #fff;
+}
+
+.fill-yellow {
+  background-color: #ffd541 !important;
+  background-color: #ffd541 !important;
+  color: #fff !important;
+}
+
+.fill-yellow:hover {
+  background-color: #fff !important;
+  color: #ffd541 !important;
+}
