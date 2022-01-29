@@ -113,6 +113,10 @@
   margin-top: 20px;
 }
 
+margin-right-xs {
+  margin-right: 5px;
+}
+
 /* Buttons */
 
 Button.disabled, .disabled {
@@ -122,8 +126,10 @@ Button.disabled, .disabled {
 }
 
 .outline-black:not(.correct-answer),
-.outline-black:not(.disabled) {
+.outline-black:not(.disabled),
+.outline-black:focus {
   border-color: #484649;
+  background-color: #fff;
   color: #484649;
 }
 
@@ -135,7 +141,8 @@ Button.disabled, .disabled {
 }
 
 .outline-red:not(.correct-answer),
-.outline-red:not(.disabled) {
+.outline-red:not(.disabled),
+.outline-red:focus {
   border-color: #fe5339;
   background-color: #fff;
   color: #fe5339;
@@ -160,7 +167,7 @@ Button.disabled, .disabled {
 
 .outline-yellow:not(.correct-answer),
 .outline-yellow:not(.disabled),
-.fill-yellow:hover {
+.outline-yellow:focus {
   border-color: #ffd541;
   background-color: #fff;
   color: #ffd541;

@@ -18,7 +18,11 @@ function GuessArticle() {
     //.get('http://localhost:9000/main-artikel/random-word')
     .then(response => {
       var wordObject = response.data;
-      setLastRandomWord(wordObject)
+      
+      setTimeout(() => {
+        setLastRandomWord(wordObject)
+      }, 2500)
+      
     })
   }
 
@@ -34,8 +38,9 @@ function GuessArticle() {
         button.classList.add("disabled");
       })
 
+      getRandomWord(clickedArticle);
+
       setTimeout(() => {
-        getRandomWord(clickedArticle);
         e.target.classList.remove("correct-answer");
         document.querySelectorAll('.article-button:not(correct-answer)').forEach(function(button) {
           button.classList.remove("disabled")
