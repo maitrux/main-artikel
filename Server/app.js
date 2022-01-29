@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static("public"));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -43,5 +43,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+const PORT = process.env.PORT || 9000
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
+})
 
 module.exports = app;

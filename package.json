@@ -1,13 +1,11 @@
 {
-  "homepage": "https://maitrux.github.io/main-artikel",
   "name": "main-artikel-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "npm start --prefix server",
+    "build": "npm run build --prefix client",
     "server": "npm start --prefix server",
     "client": "npm start --prefix client"
   },
