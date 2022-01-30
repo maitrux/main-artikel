@@ -18,11 +18,7 @@ function GuessArticle() {
     //.get('http://localhost:9000/main-artikel/random-word')
     .then(response => {
       var wordObject = response.data;
-      
-      setTimeout(() => {
-        setLastRandomWord(wordObject)
-      }, 2250)
-      
+      setLastRandomWord(wordObject)
     })
   }
 
@@ -31,6 +27,7 @@ function GuessArticle() {
 
     if(clickedArticle === lastRandomWord.articleSingular.toLowerCase()) {
       var articleText = document.querySelectorAll('.article-text.green')[0]
+      var wordToGuess = document.querySelectorAll('.word-to-guess')[0]
 
       e.target.classList.add("correct-answer");
       articleText.classList.remove("display-none");
@@ -38,14 +35,20 @@ function GuessArticle() {
         button.classList.add("disabled");
       })
 
-      getRandomWord(clickedArticle);
-
       setTimeout(() => {
+        getRandomWord(clickedArticle);
+
         e.target.classList.remove("correct-answer");
         document.querySelectorAll('.article-button:not(correct-answer)').forEach(function(button) {
           button.classList.remove("disabled")
         })
-        articleText.classList.add("display-none");
+        wordToGuess.classList.add("hidden");
+
+        setTimeout(() => {
+          articleText.classList.add("display-none");
+          wordToGuess.classList.remove("hidden");
+        }, 150);
+        
       }, 2500);
       
     }
@@ -60,8 +63,10 @@ function GuessArticle() {
 
   return(
     <div>
-      <div className='word-text'><div className='article-text green display-none'>{lastRandomWord.articleSingular}</div>{lastRandomWord.wordSingular}</div>
-      <div>(<div className='italic inline-flex'>{lastRandomWord.englishTranslation}</div>)</div>
+      <div className="word-to-guess">
+        <div className='word-text'><div className='article-text green display-none'>{lastRandomWord.articleSingular}</div>{lastRandomWord.wordSingular}</div>
+        <div>(<div className='italic inline-flex'>{lastRandomWord.englishTranslation}</div>)</div>
+      </div>
 
       <div className='margin-top-lg'>
         <Button className="outline-black article-button" variant="" value={"der"} onClick={e => validateAnswer(e, "value")}>Der</Button>{' '}

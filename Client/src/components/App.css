@@ -26,9 +26,10 @@
 }
 
 .word-text {
-  font-size: 40px;
+  font-size: 7vw;
   font-weight: bold;
   display: inline-flex;
+  word-break: break-word;
 }
 
 .article-text {
@@ -89,6 +90,10 @@
 
 .display-none {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .italic {
